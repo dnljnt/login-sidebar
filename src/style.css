@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fffffe;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  /* height: 100vh; */
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  height: 3.5rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  cursor: pointer;
+}
+
+.menu-bar,
+.close-btn {
+  cursor: pointer;
+  color: #f15757;
+}
+
+@media screen and (max-width: 1150px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 75%;
+    padding-block: 4.5rem 3.5rem;
+    background-color: #fffffe;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: left 0.4s linear;
+  }
+}
+
+.show-menu {
+  left: 0;
+}
+
+.menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  text-align: center;
+  height: 100%;
+  list-style: none;
+}
+
+.menu-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #f15757;
+  font-weight: 600;
+}
+
+/* .active {
+  color: #f15757;
+} */
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* .section{
+  padding-block: 5rem 1rem;
+} */
+
+.home-title{
+  padding-block: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.back-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+@media (min-aspect-ratio: 16/9){
+  .back-video{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9){
+  .back-video{
+    width: auto;
+    height: 100%;
+  }
+}
+
+.home-center{
+  height: 100vh;
+}
+
+.title h1{
+  font-size: 3rem;
+  color: #f15757;
+}
+
+.title p{
+  font-size: .875rem;
+  color: #fffffe;
+}
+
+button{
+  outline: none;
+  padding: .5rem 2rem;
+  border-radius: 50px;
+  border:2px solid #f15757;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all .4s linear;
+  color: #f15757;
+}
+
+button:hover{
+  background-color: #f15757;
+  color: white;
+}
+
+.login-page{
+  position: absolute;
+  top: 0;
+  left: -100%;
+  height: 100%;
+  width: 100%;
+  background-color: #fffffe;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-inline: 1.5rem;
+  gap: 1.5rem;
+  transition: all 0.8s linear;
+}
+
+.show-login{
+  left: 0;
+}
+
+.login{
+  max-width: 550px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.login-title h3{
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.login-title p{
+  font-size: .8rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-input{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input > label{
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.form-input input{
+  outline: none;
+  padding: .75rem .8rem;
+  border: 1px solid #f15757;
+  border-radius: .5rem;
+}
+
+.check{
+  display: flex;
+  justify-content: space-between;
+  margin-top: .5rem;
+}
+
+.rememberme{
+  display: inline-flex;
+  align-items: center;
+  gap: .2rem;
+}
+
+.rememberme label{
+  font-size: .8rem;
+}
+
+.rememberme input{
+  accent-color: #f15757;
+  width: 15px;
+  height: 15px;
+}
+
+.forgot-password a{
+  font-size: .8rem;
+  color: rgb(17, 17, 240);
+  font-weight: 500;
+}
+
+.copy{
+  text-align: center;
+  font-size: .8rem;
+}
+
+.close{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  color: #f15757;
+}
+
+footer a{
+  color: #f15757;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1150px) {
+  nav {
+    height: calc(3.5rem + 2rem);
+  }
+  .menu-bar,
+  .close-btn {
+    display: none;
+  }
+  .menu-list{
+    flex-direction: row;
+    column-gap: 3rem;
+  }
+  .login-page{
+    width: 25%;
+  }
+}
