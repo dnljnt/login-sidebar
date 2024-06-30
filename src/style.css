@@ -76,9 +76,12 @@ nav {
   font-weight: 600;
 }
 
-/* .active {
-  color: #f15757;
-} */
+.active {
+  color: white;
+  background-color: #f15757;
+  padding: .4rem .9rem;
+  border-radius: .5rem;
+}
 
 .close-btn {
   position: absolute;
